@@ -1,0 +1,19 @@
+{
+	"name": "very-simple-app",
+	"version": "1.0.0",
+	"description": "Very simple app with a webserver",
+	"main": "src/app.js",
+	"scripts": {
+		"start": "node src/app.js",
+		"docker:ps": "docker ps",
+		"docker:build": "docker build . -t ericgolde/nodejs-example",
+		"docker:run": "docker run --name nodejs-example -it -d -p 3000:3000 ericgolde/nodejs-example",
+		"docker:stop": "docker stop nodejs-example",
+		"docker:remove-all": "docker rm --force $(docker ps -a -q) && docker rmi --force $(docker images -q)"
+	},
+	"author": "Eric Golde",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.0"
+	}
+}
