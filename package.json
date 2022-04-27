@@ -4,6 +4,7 @@
 	"description": "Very simple app with a webserver",
 	"main": "src/app.js",
 	"scripts": {
+		"test": "echo We have no test scripts....",
 		"start": "node src/app.js",
 		"docker:ps": "docker ps",
 		"docker:build": "docker build . -t ericgolde/nodejs-example",
